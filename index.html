@@ -38,9 +38,34 @@
             width: 100%;
             max-width: 200px;
             height: auto;
+            cursor: pointer;
         }
-        .passion-text {
-            margin-top: 20px;
+        .fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1050;
+            display: none;
+        }
+        .fullscreen-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .fullscreen-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -125,11 +150,27 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <img src="histoire.png" class="img-fluid passion-image px-3" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 passion-text">
+                                <h4>Histoire</h4>
+                                <p>J’ai toujours été passionné par l’histoire de France, cette épopée fascinante qui a forgé notre identité à travers les siècles. Ce qui me captive particulièrement, ce sont les récits de guerre et d’héroïsme, 
+                                    où le courage et la stratégie se mêlent à la grandeur du destin. 
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <span class="close-btn" onclick="closeFullscreen()">&times;</span>
+        <img id="fullscreenImage" src="" alt="Fullscreen Image">
     </div>
     
     <div class="modal fade" id="motivationModal" tabindex="-1" aria-labelledby="motivationModalLabel" aria-hidden="true">
@@ -148,5 +189,22 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const images = document.querySelectorAll('.passion-image');
+        const overlay = document.getElementById('fullscreenOverlay');
+        const fullscreenImage = document.getElementById('fullscreenImage');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                fullscreenImage.src = image.src;
+                overlay.style.display = 'flex';
+            });
+        });
+
+        function closeFullscreen() {
+            overlay.style.display = 'none';
+            fullscreenImage.src = '';
+        }
+    </script>
 </body>
 </html>
