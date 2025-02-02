@@ -67,6 +67,10 @@
             color: white;
             cursor: pointer;
         }
+        #carouselProjects {
+            display: block !important;
+            visibility: visible !important;
+        }
     </style>
 </head>
 <body>
@@ -94,6 +98,9 @@
                         <a class="nav-link active" data-bs-toggle="tab" href="#experience">Expérience</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#projets">Projets</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" href="#education">Éducation</a>
                     </li>
                     <li class="nav-item">
@@ -105,24 +112,113 @@
                 </ul>
                 <div class=" bg-white tab-content mt-3">
                     <div id="experience" class="tab-pane fade show active">
-                        <h4 class="text-primary">Expériences</h4>
-                        <ul class="list-group">
-                            <li class="list-group-item">Développeur Web - Entreprise X (2023)</li>
-                            <li class="list-group-item">Stage en développement - Entreprise Y (2022)</li>
-                        </ul>
+                        <h4 class="text-primary px-3">Expériences</h4>
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <img src="Lyreco_Logotype_RGB_positive.png" class="img-fluid passion-image px-3" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 passion-text">
+                                <p>Développeuse stagiaire dans l'équipe RPA ~ Lyreco (2024)</p>
+                            </div>
+                        </div>
                     </div>
-                    <div id="education" class="tab-pane fade">
-                        <h4 class="text-primary">Éducation</h4>
-                        <ul class="list-group">
-                            <li class="list-group-item">Licence Informatique - Université Z</li>
-                            <li class="list-group-item">Baccalauréat Scientifique</li>
-                        </ul>
+
+                    <div id="projets" class="tab-pane fade">
+                        <h4 class="text-primary px-3">Projets</h4>
+                        <div id="carouselProjects" class="carousel slide mt-4" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="tresorsculturel.png" class="d-block w-100" alt="Projet 1">
+                                    <div class="carousel-caption">
+                                        <h5>Trésors Culturels</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="sommeil.png" class="d-block w-100" alt="Projet 2">
+                                    <div class="carousel-caption">
+                                        <h5>Suivi de sommeil</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjects" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProjects" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
                     </div>
+
+                    <div id="education" class="tab-pane fade py-4">
+                        <h4 class="text-primary px-3 mb-4">Éducation</h4>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-3 d-flex align-items-center">
+                                <img src="insa.png" class="img-fluid passion-image ms-3 px-3 w-50" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 d-flex align-items-center passion-text">
+                                <p class="mb-0">DEUST IOSI</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-3 d-flex align-items-center">
+                                <img src="logo+lycée+transparent+250-640w.webp" class="img-fluid passion-image ms-3 px-3 w-50" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 d-flex align-items-center passion-text">
+                                <p class="mb-0">Baccalauréat NSI & Mathématiques (Lycée Privé Notre Dame) </p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div id="competences" class="tab-pane fade">
-                        <h4 class="text-primary">Compétences</h4>
-                        <span class="badge bg-primary" data-bs-toggle="tooltip" title="HTML, CSS, JavaScript">Développement Web</span>
-                        <span class="badge bg-primary" data-bs-toggle="tooltip" title="React, Vue.js">Frameworks JS</span>
-                        <span class="badge bg-primary" data-bs-toggle="tooltip" title="PHP, MySQL">Back-end</span>
+                        <h4 class="text-primary px-3">Compétences</h4>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-3 d-flex align-items-center">
+                                <img src="baseDonnées.png" class="img-fluid passion-image ms-3 px-3 w-50" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 d-flex align-items-center passion-text">
+                                <p class="mb-0">SQL ~ MongoDb ~ SqLite</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-3 d-flex align-items-center">
+                                <img src="htmlCssJavascript.png" class="img-fluid passion-image px-3 w-100"" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 d-flex align-items-center passion-text">
+                                <p class="mb-0">Html ~ Css ~ JavaScript</p>
+                            </div>
+                        </div>
+
+
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-3 d-flex align-items-center">
+                                <img src="PHP-logo.png" class="img-fluid passion-image px-3 w-100"" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 d-flex align-items-center passion-text">
+                                <p class="mb-0">PHP ~ CakePHP</p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-3 d-flex align-items-center">
+                                <img src="react-logo_.png" class="img-fluid passion-image px-3 w-100"" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 d-flex align-items-center passion-text">
+                                <p class="mb-0">React JS ~ React Native</p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-3 d-flex align-items-center">
+                                <img src="C_Logo.png" class="img-fluid passion-image ms-5 px-3 w-50"" alt="Image responsive">
+                            </div>
+                            <div class="col-md-9 d-flex align-items-center passion-text">
+                                <p class="mb-0">C ~ C++</p>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div id="passion" class="tab-pane fade bg-white">
@@ -182,7 +278,20 @@
                 </div>
                 <div class="modal-body">
                     <p>Madame, Monsieur,</p>
-                    <p>Je suis passionné par le développement web et souhaiterais rejoindre votre entreprise afin de mettre à profit mes compétences...</p>
+                    <p> Réalisant actuellement des études en Licence Professionnelle DLWM à l’Université
+                        Polytechniques des Hauts-de-France au Campus du Mont Houy, Je suis à la recherche d’une alternance 
+                        Au cours de ma formation, j’ai acquis des bases solides en programmation via divers langages (Html, Css, JS, C etc…) mais aussi
+                        en gestion de base de données. J’ai également eu l’opportunité de travai ler sur des projets concrets et solides comme la création
+                        d’un Site Web pour la répertorisation des monuments du Nord comme Projet en 2ème année. Cela m'a permis de développer ma
+                        capacité à travailer en équipe et à résoudre des problèmes.
+
+                        <p>Je suis intéressée par le poste de développeuse, et je suis convaincue que les compétences que j’ai acquises jusqu’à
+                        présent me permettront de contribuer efficacement aux projets. Je suis également en quête d’apprendre de nouvelles
+                        technologies ou méthodologies.</p>
+                        <p>Je suis persuadée qu'une alternance serait une expérience importante pour moi mais aussi une occasion précieuse de mettre en
+                        pratique mes acquis dans un cadre professionnel et de pouvoir développer mon sens du travail en équipe.</p>
+                        <p>Cordialement,</p>
+                        <p>Faustine Wandolski</p>
                 </div>
             </div>
         </div>
